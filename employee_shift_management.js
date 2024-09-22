@@ -9,4 +9,14 @@ const employees = [
 
 // Create array of employees
 
+// Task 2 - Create a Function to Display Employee Shift Details
 
+function displayEmployeeShifts(employees){
+    console.log(`Employee: ${employees.name}`) //searches employee in the array and logs their name 
+
+    employees.shifts.forEach(shifts => {
+        console.log(`Day: ${shifts.day}, Hours: ${shifts.hours}`); //forEach method locates each employee's shifts, and then it will log their days and hours
+    })
+};
+
+displayEmployeeShifts(employees[2]);

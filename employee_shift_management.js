@@ -46,3 +46,21 @@ assignShift(`Max`, `Friday`, 6);
 assignShift(`Jonh`, `Tuesday`, 8);
 
 
+// Task 4 - Create a Function to Calculate Total Hours Worked
+
+
+function calculateTotalHours(employeeName){
+    let employee = employee.find(emp => emp.name === employeeName); //find employee by name, again
+
+    if (!employee) {
+        console.log(`Error: Employee ${employeeName} not found.`); // if employee name is not found, it logs a error message
+        return;
+    }
+
+    const totalHours = employee.shifts.reduce((sum, shift) => sum + shift.hours, 0); //summing all hours worked from all shifts
+    console.log(`${employeeName} has worked a total of ${totalHours} hours this week.`); // log the total hours worked
+    return totalHours;
+}
+
+calculateTotalHours(`Guimo`);
+

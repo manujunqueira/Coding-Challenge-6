@@ -3,7 +3,7 @@
 const employees = [
     {name: `John`, shifts: [{day: `Monday`, hours: 8}, {day: `Wednesday`, hours: 6}] },
     {name: `Sarah`, shifts: [{day: `Tuesday`, hours: 5}, {day: `Thursday`, hours: 7}] },
-    {name: `Guimo`, shifts: [{day: `Tuesday`, hours: 7}] },
+    {name: `Gui`, shifts: [{day: `Tuesday`, hours: 7}] },
     {name: `Max`, shifts: [{day: `Friday`, hours: 8}] },
 ];
 
@@ -43,14 +43,14 @@ function assignShift(employeeName, day, hours) { //find employee by name
 }
 
 assignShift(`Max`, `Friday`, 6);
-assignShift(`Jonh`, `Tuesday`, 8);
+assignShift(`John`, `Tuesday`, 8);
 
 
 // Task 4 - Create a Function to Calculate Total Hours Worked
 
 
 function calculateTotalHours(employeeName){
-    let employee = employee.find(emp => emp.name === employeeName); //find employee by name, again
+    let employee = employees.find(emp => emp.name === employeeName); //find employee by name, again
 
     if (!employee) {
         console.log(`Error: Employee ${employeeName} not found.`); // if employee name is not found, it logs a error message
@@ -62,7 +62,7 @@ function calculateTotalHours(employeeName){
     return totalHours;
 }
 
-calculateTotalHours(`Guimo`);
+calculateTotalHours(`Gui`);
 
 // Task 5 - Create a Function to List Employees with Free Days
 
